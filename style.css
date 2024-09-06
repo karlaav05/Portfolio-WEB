@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.gallery {
+    background: #f9deea;
+}
+
+.gallery-cell {
+    width: 66%;
+    height: 400px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-cell img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+blockquote {
+    font-weight: 80;
+    font-size: 1.2rem;
+    max-width: 300px;
+    line-height: 1.4;
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Special Elite', cursive;
+    background: #fffdf5;
+    color: #1e1e38;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+blockquote:before {
+    content: '“';
+    font-size: 4rem;
+    color: #f1efe6;
+    position: absolute;
+    left: -1.5rem;
+    top: -1rem;
+}
+
+cite {
+    line-height: 3;
+    font-family: 'Times New Roman', cursive;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f9deea;
+    padding: 10px 0;
+    text-align: center;
+    outline: solid;
+    outline-color: #c788a4;
+}
+
+nav ul {
+  background-color: #f9deea;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.description {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #a16580;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.description p {
+  flex: 1;
+  margin: 0;
+}
+
+.school-logo {
+  width: 80px;
+  height: auto;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Lista de educación */
+.education-list {
+  width: 60%;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.header{
+  background-color: #c788a4;
+}
+
+*{
+  background-color: #f9deea;
+}
+
+
+body2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:  white;
+  overflow-x: hidden;
+}
+
+.carousel{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 0 0 300px;
+  border-radius: 10px;
+  background-color:#c788a4;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  scroll-snap-align: start;
+}
+
+.card:hover {
+ transform: scale(1.05)
+}
+
+.card-image {
+  width: 100%;
+  height : 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  background-color: #c788a4;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  background-color: #c788a4;
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+  color: #c788a4;
+  margin-bottom: 0.75rem;
+  background-color: #c788a4;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.25rem;
+  background-color: #c788a4;
+}
+
+body3 {
+  background-color: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.media-section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.media-list {
+  list-style-type: none;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #c788a4;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c788a4;
+  padding-bottom: 5px;
+}
+
+.media-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.media-item {
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.media-item:hover {
+  transform: scale(1.05);
+}
+
+.media-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.media-item p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .media-items {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .media-item {
+      width: 100%;
+  }
+}
+
+
+body4 {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.agenda {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.agenda-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.agenda-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #c788a4;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c788a4;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group label {
+  margin-left: 8px;
+}
+
+.confirm-btn {
+  background-color: #c788a4;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #c788a4;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .agenda {
+      padding: 15px;
+  }
+
+  .form-group {
+      flex-direction: column;
+  }
+}
+
+/* Blur effect when the user scrolls down */
+.header.blur {
+  filter: blur(5px); /* Adjust the blur level */
+}
+
+/* Content below the header to enable scrolling */
+.body-content {
+  height: 2000px; /* Just for demonstration */
+  padding: 20px;
+}
