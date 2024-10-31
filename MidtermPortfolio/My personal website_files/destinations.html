@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Destinations</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .gallery-cell {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        #dest-details {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        img {
+            max-width: 1000px;
+            height: auto;
+        }
+        caption {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        let paises = [
+            `<h1>Edinburgh</h1><hr><img src="images/scotlandflag.jpg" width="100%"/><p>Edinburgh is a city full of charm with both historic and modern architecture. Explore its streets, visit the castle, and enjoy its history. <br> Scotland <br> 559,000 <br> 55.9533N, 3.1883W</p>`,
+            `<h1>Dubrovnik</h1><hr><img src="images/croatiaflag.jpg" width="100%"/><p>Dubrovnik's old town is a must-see. Stroll through alleys, visit beaches, and enjoy the views from the top of the city wall. <br> Croatia <br> 28,428 <br> 42.640278, 18.108334</p>`,
+            `<h1>London</h1><hr><img src="images/ukflag.jpg" width="100%"/><p>London offers parks, monuments, shopping, museums, and much more. A city where there's always something new to try. <br> England <br>  9'748,000 <br> 51.509865, -0.118092</p>`,
+            `<h1>Berlin</h1><hr><img src="images/germanyflag.jpg" width="100%"/><p>Berlin is full of history and diversity. Visit the Berlin Wall, explore museums, and enjoy the vibrant culture. <br> Germany <br> 3'577,000 <br> 52.520008, 13.404954</p>`,
+            `<h1>Lisboa</h1><hr><img src="images/lisboaflag.jpg" width="100%"/><p>Lisboa offers stunning views, incredible seafood, and nearby cities like Belém for even more exploration. Portugal <br> 3'015,000 <br> 38.736946, -9.142685</p>`,
+            `<h1>Seoul</h1><hr><img src="images/skflag.jpg" width="100%"/><p>Seoul is a blend of technology and tradition. Visit palaces, try local food, and enjoy the nightlife or the calm of the Han River. <br> South Korea <br> 10'005,000 <br> 37.532600, 127.024612</p>`,
+            `<h1>Tokyo</h1><hr><img src="images/japanflag.jpg" width="100%"/><p>Tokyo is a dynamic mix of modernity and tradition, offering endless experiences in its different neighborhoods. <br> Japan <br> 37'115,000 <br> 35.652832, 139.839478</p>`,
+            `<h1>Bangkok</h1><hr><img src="images/thailandflag.webp" width="100%"/><p>Bangkok is an exciting destination with palaces, elephant sanctuaries, beaches, and delicious food, all at affordable prices. <br> Thailand <br> 11'234,000 <br> 13.736717, 100.523186</p>`,
+            `<h1>Santorini</h1><hr><img src="images/santoriniflag.jpg" width="100%"/><p>Santorini is a picturesque island known for its stunning views, great food, and unique architecture. <br> Greece <br> 15,000 <br> 36.393154, 25.461510</p>`,
+            `<h1>Bali</h1><hr><img src="images/baliflag.jpg" width="100%"/><p>Bali, the Island of the Gods, is a culturally rich paradise with beautiful landscapes and vibrant traditions. <br> Indonesia <br> 739,198 <br> -8.409518, 115.188919</p>`
+        ];
+
+        window.onload = function() {
+            document.getElementById("dest-details").innerHTML = paises[0];
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let flkty = new Flickity('.gallery', {
+                wrapAround: true,
+                imagesLoaded: true
+            });
+
+            flkty.on('change', function(index) {
+                document.getElementById("dest-details").innerHTML = paises[index];
+                document.getElementById("title").innerHTML = index < 5 ? "My Favorite Spots" : "My Dream Destinations";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title">My Favorite Spots</h1>
+
+    <!-- Flickity Gallery -->
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+        <img class="gallery-cell" src="images/edinburgh1.jpg" width="400px" height="600px" alt="Edinburgh"/>
+        <img class="gallery-cell" src="images/dubrovnik.jpg" width="400px" height="600px" alt="Dubrovnik"/>
+        <img class="gallery-cell" src="images/london3.jpg" width="400px" height="600px" alt="London"/>
+        <img class="gallery-cell" src="images/berlin.jpg" width="400px" height="600px" alt="Berlin"/>
+        <img class="gallery-cell" src="images/lisboa.avif" width="400px" height="600px" alt="Lisboa"/>
+        <img class="gallery-cell" src="images/korea.jpg" width="400px" height="600px" alt="Seoul"/>
+        <img class="gallery-cell" src="images/japan.jpg" width="400px" height="600px" alt="Tokyo"/>
+        <img class="gallery-cell" src="images/thailand.jpg" width="400px" height="600px" alt="Bangkok"/>
+        <img class="gallery-cell" src="images/santorini.jpg" width="400px" height="600px" alt="Santorini"/>
+        <img class="gallery-cell" src="images/bali.jpg" width="400px" height="600px"  alt="Bali"/>
+    </div>
+
+    <div id="dest-details"></div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header, footer {
+    background: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+form {
+    margin: 10px 0;
+}

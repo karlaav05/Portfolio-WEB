@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Personal Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href = "styles.css" type = "text/css" rel = "stylesheet"/>
+    </head>
+    <body>
+      <script>
+        // Detect scroll and apply blur to header
+        window.addEventListener('scroll', function() {
+          var header = document.querySelector('.header');
+          var scrollPosition = window.scrollY;
+      
+          if (scrollPosition > 100) { // Adjust the scroll threshold
+            header.classList.add('blur');
+          } else {
+            header.classList.remove('blur');
+          }
+        });
+      </script>
+    
+    <div class="header">
+      <h2>Karla Avila</h2>
+      <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Hobbies">Hobbies</a></li>
+            <li><a href="#Agenda">Agenda</a></li>
+        </ul>
+    </nav>
+    <img src="Images/me2.JPG" width="200">
+    </div>
+    
+    <div class="row">
+      <div class="column side" style="background-color:#f9deea;">My favourite Quote
+        <blockquote>Im the one I should love in this world.</blockquote>
+        <cite>BTS - Epiphany</cite>
+      </div>
+      <div class="column middle" style="background-color:#f9deea">About me
+        <p> Animation student</p> <!-- How i wanna be known-->
+        <p> Av. Valdepeñas 50, coto cordoba </p>
+        <p> Im someone who loves creating her own stories, i also enjoy spending time with loved ones, going to concerts and traveling.</p>
+      </div>
+      <div class="column side" style="background-color:#f9deea;">Background
+        <p> <!--Write about my background-->
+        Im Karla, born in 2004. 
+        Ever since i was young i loved drawing and writing my own stories and growing up i developed a strong like for movies and a few videogames,
+        thats how i chose to study animation. <br>
+        <br>
+        As a proffessional, my goals are to keep learning and to be able to work in the making of a movie or videogame. 
+        If that where not the case im open to trying out new things.
+        <!--This is just a <strong> test </strong> for <br> the paragraph <b> element &lt;p&gt;</b>-->
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer" style = "background-color: #d2b9c4;">
+        <p> These are my favorite <a href = "destinations/destinations.html" alt = "Link to destinations" target = "">destinations</a></p>
+    </div>
+    
+    <section id="Education">
+      <h2> Education </h2> <!--History of education from Kindergarden to College-->
+          <ul>
+              <li><em> 2007-2009: </em><b> Colegio Pierre Faure </b>
+                  <div id="descipcion_Kinder" class="description">
+                  <a href="https://www.pierrefaure.edu.mx/" target = "_blank">
+                      <img src="./My personal website_files/pierreFaure.png" class="school-logo"></li>
+                      
+                      <a href ="https://www.pierrefaure.edu.mx/" target = "_blank"> Click to know more about Pierre Faure: </a> 
+                  </a>
+              </div>
+              
+              <li><em> 2010-2012: </em><b> Colegio Regional de Mexico </b>
+                  <div id="descipcion_Primaria" class="description">
+                  <a href="https://sistemavalladolid.com/portal/colegio.php?homo=coro" target = "_blank">
+                      <img src="./My personal website_files/COREM.png" class="school-logo"></li>
+  
+                      <a href ="https://sistemavalladolid.com/portal/colegio.php?homo=coro" target = "_blank"> Click to know more about COREM: </a> 
+                  </a>
+              </div>
+  
+              <li><em> 2013-2021: </em><b> Subiré Business School </b>
+                  <div id="descipcion_SyP" class="description">
+                  <a href="https://subire.mx/" target = "_blank">
+                      <img src="./My personal website_files/subire.png" class="school-logo"></li>
+                      <a href ="https://subire.mx/" target = "_blank"> Click to know more about Subiré Business School </a> 
+                  </a>
+              </div>
+  
+              <li><em> 2021-2022: </em><b> Varndean College </b>
+                  <div id="descipcion_uk" class="description">
+                  <a href= "https://varndean.ac.uk/" target = "_blank">
+                      <img src="./My personal website_files/varndean.png" class="school-logo"></li>
+                      <a href = "https://varndean.ac.uk/" target = "_blank"> CLick to know more about Varndean College</a>
+                  </a>
+              </div>
+  
+              <li> <em> 2022-2024: </em><b>Universidad Panamericana </b>
+                  <div id="descipcion_uni" class="description">
+                  <a href=" https://www.up.edu.mx/" target = "_blank">
+                      <img src="./My personal website_files/up.png" class="school-logo"></li>
+                      <a href=" https://www.up.edu.mx/" target = "_blank"> Click to know more about UP</a>
+                  </a>
+              </div>
+          </ul>
+      </section>
+      
+    <section id="Skills">
+    <h2> Skills </h2> <!--List of technical skills-->
+    <ol type="1">
+        <li> English 90%</li>
+        <li> Modelling 60%</li>
+        <li> Problem solving 75% </li>
+        <li> Programming 35% </li>
+        <li> Analitical Thinking 75% </li>
+    </ol>
+  </section>  
+
+  <section id="Hobbies">
+    <h2> Hobbies </h2>
+    <h3> Favorite food </h3> 
+
+        <ol type="1">
+            <li> Mexican </li>
+            <li> Korean </li>
+            <li> Japanese </li>
+            <li> Italian </li>
+            <li> Indian </li>
+        </ol>
+        
+        <ol start="19">
+            <li> Australian </li>
+            <li> French </li>
+            <li> English </li>
+        </ol>
+  </section>
+
+        <section class="media-section">
+          <h3 class="section-title">Books, Movies & TV Shows</h3>
+          <ul class="media-list">
+              <li>
+                  <h4 class="category-title">Books</h4>
+                  <ol class="media-items">
+                      <li class="media-item">
+                          <p>Almond</p>
+                          <img src="./My personal website_files/almond.jpg" alt="Almond" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>La ladrona de la luna</p>
+                          <img src="./My personal website_files/ladronadelaluna.jpg" alt="La ladrona de la luna" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>The Sun and Her Flowers</p>
+                          <img src="./My personal website_files/sun.jpg" alt="The Sun and Her Flowers" class="media-image">
+                      </li>
+                  </ol>
+              </li>
+      
+              <li>
+                  <h4 class="category-title">Movies</h4>
+                  <ol class="media-items">
+                      <li class="media-item">
+                          <p>Tangled</p>
+                          <img src="./My personal website_files/tangled.jpg" alt="Tangled" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>Spiderman: Into the Spider-Verse</p>
+                          <img src="./My personal website_files/spiderman.jpg" alt="Spiderman: Into the Spider-Verse" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>How to Train Your Dragon</p>
+                          <img src="./My personal website_files/httyd.jpg" alt="How to Train Your Dragon" class="media-image">
+                      </li>
+                  </ol>
+              </li>
+      
+              <li>
+                  <h4 class="category-title">TV Shows</h4>
+                  <ol class="media-items">
+                      <li class="media-item">
+                          <p>True Beauty</p>
+                          <img src="./My personal website_files/truebeauty.jpg" alt="True Beauty" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>Lovely Runner</p>
+                          <img src="./My personal website_files/lovelyrunner.jpg" alt="Lovely Runner" class="media-image">
+                      </li>
+                      <li class="media-item">
+                          <p>Hidden Love</p>
+                          <img src="./My personal website_files/hiddenlove.jpg" alt="Hidden Love" class="media-image">
+                      </li>
+                  </ol>
+              </li>
+          </ul>
+      </section>
+
+      <div class="carousel"> 
+        <div class="card">
+          <img src="My personal website_files/BTS.webp" alt="BTS" class="card-image">
+          <div class="card-content">
+              <h2 class="card-title">BTS</h2>
+              <h3 class="card-subtitle">Musicians, Boy band</h3>
+              <p class="card-text">
+              <p class ="card-text"> Debut: 13th of June 2013</p>
+                One of the greatest boy bands to ever exist <br>
+                Have broken multiple records <br> 
+                Recipients of the cultural merit of South Korea <br> 
+                Have worked with UNICEF to create the Love Yourself campaign, etc...
+              </p>
+          </div>
+        </div> 
+
+        <div class="card">
+          <img src="My personal website_files/disney.jpeg" alt="Disney" class="card-image">
+          <div class="card-content">
+              <h2 class="card-title">Walt Disney</h2>
+              <h3 class="card-subtitle">Business Man, Writer, Producer</h3>
+              <p class="card-text">
+              <p class ="card-text"> 5th of December 1901 / 15th of December 1966</p>
+                Created the biggest animation company along with the Disney Parks and some of the stories we all love.
+              </p>
+          </div>
+        </div> 
+
+        <div class="card">
+          <img src="My personal website_files/rupikaur.jpeg" alt="RupiKaur" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Rupi Kaur</h2>
+            <h3 class="card-subtitle">Writer, poet, illustrator</h3>
+            <p class="card-text">
+            <p class ="card-text"> 4th of October 1992 / NA</p>
+              Has become a best seller with her books of poetry and illustrations
+            </p>
+        </div>
+      </div>  
+    </div> 
+             
+    <section class= "schedule-section" id="agenda">
+        <h2>Agenda</h2>
+        <form class="schedule-form">
+            <div class="schedule-subsection">
+                <h3>Step 1: Date & Time</h3>
+                <hr>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="time-start">Time Start:</label>
+                <input type="time" id="time-start" name="time-start" required>
+    
+                <label for="time-end">Time End:</label>
+                <input type="time" id="time-end" name="time-end" required>
+            </div>
+    
+            <div class="schedule-subsection">
+                <h3>Step 2: Activity Details</h3>
+                <hr>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+                <label for="activity">Activity:</label>
+                <input type="text" id="activity" name="activity" placeholder="Describe the activity" required>
+    
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" placeholder="Enter the location" required>
+    
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="school">School</option>
+                    <option value="personal">Personal</option>
+                    <option value="professional">Professional</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="other">Other</option>
+                </select>
+    
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" placeholder="Any additional notes"></textarea>
+            </div>
+            <div class="schedule-subsection">
+                <h3>Step 3: Confirmation</h3>
+                <hr>
+                <label for="flag">Flag Color:</label>
+                <input type="color" id="flag" name="flag">
+    
+                <label for="free-busy">Availability:</label>
+                <input type="checkbox" id="free-busy" name="free-busy">
+                <label for="free-busy">Free or busy:</label>
+    
+                <button type="submit" class="confirm-btn">Confirm Appointment</button>
+            </div>
+        </form>
+          <table id="scheduleTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time Start</th>
+                <th>Time End</th>
+                <th>Name</th>
+                <th>Activity</th>
+                <th>Place</th>
+                <th>Type</th>
+                <th>Notes</th>
+                <th>Flag Color</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </section>
+
+    <script src="agenda.js"></script>
+
+</body>
+</html>
+    

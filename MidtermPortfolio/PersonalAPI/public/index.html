@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal API</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    
+    <form id="greetForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <button type="submit">Greet</button>
+    </form>
+    
+    <h2 id="greetingMessage"></h2>
+    
+    <h3>TODO List</h3>
+    <ul id="taskList"></ul>
+    
+    <form id="taskForm">
+        <input type="text" id="task" placeholder="New Task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <script>
+        document.getElementById('greetForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+
+            const response = await fetch('/greet', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            const greetingMessage = `Hello ${name}!`;
+            document.getElementById('greetingMessage').innerText = greetingMessage;
+
+            const namesList = document.createElement('ul');
+            data.names.forEach((person, index) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="/wazzup.html?name=${person}">${person}</a>`;
+                namesList.appendChild(listItem);
+            });
+            document.body.appendChild(namesList);
+        });
+
+        document.getElementById('taskForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const task = document.getElementById('task').value;
+
+            await fetch('/task', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ task })
+            });
+
+            loadTasks();
+        });
+
+        async function loadTasks() {
+            const response = await fetch('/task');
+            const tasks = await response.json();
+
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach(task => {
+                const listItem = document.createElement('li');
+                listItem.innerText = task;
+                taskList.appendChild(listItem);
+            });
+        }
+
+        loadTasks();
+    </script>
+</body>
+</html>

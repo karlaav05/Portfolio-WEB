@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <!-- Navbar with search field -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Sign In Section -->
+  <div class="container mt-5 pt-5">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="signInEmail" placeholder="name@example.com" required>
+              <label for="signInEmail">Email address</label>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="signInPassword" placeholder="Password" required>
+              <label for="signInPassword">Password</label>
+              <div class="invalid-feedback">
+                Please enter your password.
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible Sidebar -->
+  <div class="d-flex">
+    <nav id="sidebar" class="sidebar col-md-3 col-lg-2 bg-light collapse d-lg-block">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">My orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Clothing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Health & Beauty</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- Main content -->
+    <main class="col-md-9 col-lg-10">
+      <div class="container">
+
+        <!-- Accordion -->
+        <h2 class="mt-5">Accordion</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Item #1
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                This is the first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Item #2
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                This is the second item's accordion body.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons and Button Groups -->
+        <h2 class="mt-5">Buttons & Button Groups</h2>
+        <div>
+          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-secondary">2</button>
+        </div>
+        <div class="btn-group mt-3" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-primary">1</button>
+          <button type="button" class="btn btn-outline-primary">2</button>
+          <button type="button" class="btn btn-outline-primary">3</button>
+        </div>
+
+        <!-- Card -->
+        <h2 class="mt-5">Card</h2>
+        <div class="card" style="width: 18rem;">
+          <img src="./redPanda.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Hi!</h5>
+            <p class="card-text">Have a nice day</p>
+            <a href="#" class="btn btn-primary">Click for a surprise</a>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <h2 class="mt-5">Modal</h2>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch Demo Modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Modal body content.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popover -->
+        <h2 class="mt-5">Popover</h2>
+        <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-content="Popover body content">
+          Click here to toggle popover
+        </button>
+
+        <!-- Progress -->
+        <h2 class="mt-5">Progress Bar</h2>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div>
+
+        <!-- Spinner -->
+        <h2 class="mt-5">Spinner</h2>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <!-- Tooltip -->
+        <h2 class="mt-5">Tooltip</h2>
+        <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+          Hover over
+        </button>
+
+        <!-- Iconic Link -->
+        <h2 class="mt-5">Iconic Link</h2>
+        <a href="#" class="icon-link">
+          <i class="bi bi-house-door-fill"></i>
+          Home
+        </a>
+
+        <!-- Floating Labels -->
+        <h2 class="mt-5">Floating Label</h2>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+
+       <!-- Main content -->
+    <main class="col-md-9 col-lg-10">
+        <div class="container">
+  
+          <!-- Checkout Form -->
+          <h2 class="mt-5">Checkout</h2>
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Your cart</span>
+                <span class="badge bg-primary rounded-pill">3</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Boots</h6>
+                    <small class="text-muted">size 6, black</small>
+                  </div>
+                  <span class="text-muted">$70</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Shadow Palette</h6>
+                    <small class="text-muted">Eyeshadow Palette with 12 shades</small>
+                  </div>
+                  <span class="text-muted">$34</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Aloe Vera Mask</h6>
+                    <small class="text-muted">Facial mask</small>
+                  </div>
+                  <span class="text-muted">$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total (USD)</span>
+                  <strong>$109</strong>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Billing address</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+  
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+  
+                  <div class="col-12">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+  
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+  
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+  
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+  
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+  
+                <hr class="my-4">
+  
+                <h4 class="mb-3">Payment</h4>
+  
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+  
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name
+  
+  
+    </main>
+  </div>
+
+  <!-- Sticky Footer -->
+  <footer class="sticky-footer text-center py-3">
+    <div class="container">
+      <span class="text-muted">Sticky Footer Content &copy; 2024</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+</html>
+

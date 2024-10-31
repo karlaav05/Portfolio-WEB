@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;;
+  }
+  
+  /* Style the header */
+  .header {
+    background-image: url("gray-floral.png");
+    font-family: 'Times New Roman';
+    background-color: #c788a4;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    font-weight: bold;
+    padding: 10px;
+    outline: solid ;
+    outline-color: #c788a4 ;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 25%;
+    font-weight: bold;
+  }
+  
+  /* Middle column */
+  .column.middle {
+    width: 50%;
+    font-weight: bold;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    outline: solid ;
+    outline-color: #c788a4 ;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
+
+
+   
