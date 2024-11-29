@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Drivers</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <img src="/images/StarLion.png" alt="lion brewery" />
+    <h1>Welcome to my F1 DB</h1>
+    
+    <form id="driver-form" action="/driver" method="post">
+        <h2>Driver Information</h2>
+        <input type="hidden" name="id" id="id" />
+        <input type="text" name="num" id="num" placeholder="Number" />
+        <input type="text" name="code" id="code" placeholder="Code" />
+        <input type="text" name="forename" id="forename" placeholder="Name" />
+        <input type="text" name="surname" id="surname" placeholder="Last name" />
+        <br />
+        <label for="dob">Date of birth: </label>
+        <input type="date" name="dob" id="dob" />
+        <label for="url">Biography URL: </label>
+        <input type="url" name="url" id="url" />
+        <br />
+        <label for="nation">Nationality: </label>
+        <select name="nation" id="nation">
+            <% countries.forEach(country => { %>
+                <option value="<%= country.code %>"><%= country.label %></option>
+            <% }) %>
+        </select>
+        <label for="team">Team: </label>
+        <select name="team" id="team">
+            <% teams.forEach(team => { %>
+                <option value="<%= team._id %>"><%= team.name %></option>
+            <% }) %>
+        </select>
+        <p><input type="submit" value="Save" /></p>
+    </form>
+    
+    <button id="toggle-view">Toggle View</button>
+
+    <h2>Drivers</h2>
+    <div id="drivers-container">
+        <ul>
+            <% drivers.forEach(driver => { %>
+                <li>
+                    <form action="/driver/<%= driver._id %>" method="post">
+                        <input type="hidden" name="_method" value="PUT" />
+                        <input type="text" name="num" value="<%= driver.num %>" />
+                        <input type="text" name="code" value="<%= driver.code %>" />
+                        <input type="text" name="name" value="<%= driver.forename %>" />
+                        <input type="text" name="lname" value="<%= driver.surname %>" />
+                        <button type="submit">Update</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+
+</html>
